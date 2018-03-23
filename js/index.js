@@ -46,13 +46,13 @@ var display = function() {
   for(var i = 0; i < timezones.length; i++) {
     var tz = timezones[i];
     var m = moment();
-    tz.time = m.tz(tz.timezone).format('h:mm a');
+    tz.time = m.tz(tz.timezone).format('h:mm:ss a');
     tz.when = m.format('dddd');  content.append(Mustache.render(template, tz));
   }
 }
 
 display();
-setInterval(display, 30000);
+setInterval(display, 3);
 
 // cornify
 

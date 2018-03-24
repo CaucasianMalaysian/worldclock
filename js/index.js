@@ -1,27 +1,27 @@
 var timezones = [
   {
-    name: 'Seattle',
+    name: 'Knoxville',
+    timezone: 'America/NewYork'
+  },
+  {
+    name: 'Los Angeles',
     timezone: 'America/Los_Angeles'
   },
   {
-    name: 'Chicago',
-    timezone: 'America/Chicago'
-  },
-  {
-    name: 'Montreal',
-    timezone: 'America/Montreal'
+    name: 'Hong Kong',
+    timezone: 'Asia/Shanghai'
   },
   {
     name: 'London',
     timezone: 'Europe/London'
   },
   {
-    name: 'Gurgaon',
-    timezone: 'Asia/Kolkata'
+    name: 'Singapore',
+    timezone: 'Asia/Singapore'
   },
   {
-    name: 'Shenzhen',
-    timezone: 'Asia/Shanghai'
+    name: 'Dubai',
+    timezone: 'Asia/Dubai'
   },
   {
     name: 'Brisbane',
@@ -31,10 +31,7 @@ var timezones = [
     name: 'Sydney',
     timezone: 'Australia/Sydney'
   },
-  {
-    name: 'Knoxville',
-    timezone: 'America/New_York'
-  }  
+
 ];
 
 var template = $('#timezone').html();
@@ -52,7 +49,7 @@ var display = function() {
 }
 
 display();
-setInterval(display, 3);
+setInterval(display, 100);
 
 // cornify
 

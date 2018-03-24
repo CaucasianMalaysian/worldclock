@@ -99,13 +99,17 @@ var display = function() {
   for(var i = 0; i < timezones.length; i++) {
     var tz = timezones[i];
     var m = moment();
-    tz.time = m.tz(tz.timezone).format('H:mm');
+    tz.time = m.tz(tz.timezone).format('H:mm:ss');
     tz.when = m.format('dddd');  content.append(Mustache.render(template, tz));
+    
   }
 }
-
 display();
-setInterval(display, 599946);
+setInterval(display, 1000000);
+
+
+
+
 
 // cornify
 

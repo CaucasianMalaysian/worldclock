@@ -1,3 +1,48 @@
+$(document).ready(function () {
+  // Create two variable with the names of the months and days in an array
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+    "October", "November", "December"
+  ];
+  var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  // Create a newDate() object
+  var newDate = new Date();
+  // Extract the current date from Date object
+  newDate.setDate(newDate.getDate());
+  // Output the day, date, month and year    
+  $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] +
+    ' ' + newDate.getFullYear());
+
+  setInterval(function () {
+    // Create a newDate() object and extract the seconds of the current time on the visitor's
+    var seconds = new Date().getSeconds();
+    // Add a leading zero to seconds value
+    $("#sec").html((seconds < 10 ? "0" : "") + seconds);
+  }, 1000);
+
+  setInterval(function () {
+    // Create a newDate() object and extract the minutes of the current time on the visitor's
+    var minutes = new Date().getMinutes();
+    // Add a leading zero to the minutes value
+    $("#min").html((minutes < 10 ? "0" : "") + minutes);
+  }, 1000);
+
+  setInterval(function () {
+    // Create a newDate() object and extract the hours of the current time on the visitor's
+    var hours = new Date().getHours();
+    // Add a leading zero to the hours value
+    $("#hours").html((hours < 10 ? "0" : "") + hours);
+  }, 1000);
+
+});
+
+var newYork = moment.tz("2018-03-11 17:40", "America/New_York");
+var losAngeles = newYork.clone().tz("America/Los_Angeles");
+var london = newYork.clone().tz("Europe/London");
+newYork.format(); // 2014-06-01T12:00:00-04:00
+losAngeles.format(); // 2014-06-01T09:00:00-07:00
+london.format(); // 2014-06-01T17:00:00+01:00
+
+
 var timezones = [
   {
     name: 'Knoxville',
@@ -54,13 +99,13 @@ var display = function() {
   for(var i = 0; i < timezones.length; i++) {
     var tz = timezones[i];
     var m = moment();
-    tz.time = m.tz(tz.timezone).format('h:mm:ss a');
+    tz.time = m.tz(tz.timezone).format('H:mm');
     tz.when = m.format('dddd');  content.append(Mustache.render(template, tz));
   }
 }
 
 display();
-setInterval(display, 100);
+setInterval(display, 599946);
 
 // cornify
 

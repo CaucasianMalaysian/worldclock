@@ -9,10 +9,10 @@ var timezones = [
   },
   {
     name: 'Hong Kong',
-    timezone: 'Asia/Shanghai'
+    timezone: 'Asia/Hong_Kong'
   },
   {
-    name: 'London',
+    name: 'Dublin',
     timezone: 'Europe/London'
   },
   {
@@ -24,14 +24,25 @@ var timezones = [
     timezone: 'Asia/Dubai'
   },
   {
-    name: 'Brisbane',
-    timezone: 'Australia/Brisbane'
+    name: 'Bogata',
+    timezone: 'America/Bogota'
   },
   {
     name: 'Sydney',
     timezone: 'Australia/Sydney'
   },
-
+  {
+    name: 'Kiev',
+    timezone: 'Europe/Kiev'
+  },
+  {
+    name: 'Moscow',
+    timezone: 'Europe/Moscow'
+  },
+  {
+    name: 'Brussels',
+    timezone: 'Europe/Brussels'
+  },
 ];
 
 var template = $('#timezone').html();

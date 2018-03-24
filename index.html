@@ -18,30 +18,57 @@
   <script type="text/javascript" src="https://momentjs.com/downloads/moment-timezone.js"></script>
 
 </head>
+<script>
+  $(document).ready(function () {
+    $("#hide1").click(function () {
+      $(".sh1").hide();
+    });
+  });
+  $(document).ready(function () {
+    $("#show1").click(function () {
+      $(".sh1").show();
+    });
+  });
+  $(document).ready(function () {
+    $("#hide2").click(function () {
+      $(".sh2").hide();
+    });
+  });
+  $(document).ready(function () {
+    $("#show2").click(function () {
+      $(".sh2").show();
+    });
+  });
+  $(document).ready(function () {
+    $("#hide3").click(function () {
+      $(".sh3").hide();
+    });
+  });
+  $(document).ready(function () {
+    $("#show3").click(function () {
+      $(".sh3").show();
+    });
+  });
+  $(document).ready(function () {
+    $("#hide4").click(function () {
+      $(".sh4").hide();
+    });
+  });
+  $(document).ready(function () {
+    $("#show4").click(function () {
+      $(".sh4").show();
+    });
+  });
+</script>
 
 <body style="background-color:black;">
-  <!--
-    <span>
-        <button class="btn" id="hide1">HIDE #1</button>
-        <button class="btn" id="show1">SHOW #1</button>
-    </span>
-    <br>
-    <span>
-        <button class="btn" id="hide2">HIDE #2</button>
-        <button class="btn" id="show2">SHOW #2</button>
-    </span>
-    <br>
-    <span>
-        <button class="btn" id="hide3">HIDE #3</button>
-        <button class="btn" id="show3">SHOW #3</button>
-    </span>
-    <br>
-    <span>
-        <button class="btn" id="hide4">HIDE #4</button>
-        <button class="btn" id="show4">SHOW #4</button>
-    </span>
-    <br>
-</div>-->
+
+    <button class="btn button" name="button" id="hide2">HIDE</button>
+    <button onClick="window.location.reload()" class="btn button" id="show2">SHOW</button>
+  </span>
+  <br>
+
+  </div>
 
 
 
@@ -63,10 +90,10 @@
   </div>
   <div id="content"></div>
   <script type="text/template" id="timezone">
-    <div class="timezone">
-      <div class="time hide" id="time-{{name}} sh1">{{time}}</div>
-      <h1 class="timezone__location hide" id="sh2">{{name}}</h1>
-      <attr class="hide" id="sh3">
+    <div class="timezone sh2">
+      <div class="time hide sh2" id="time-{{name}}">{{time}}</div>
+      <h1 class="timezone__location hide">{{name}}</h1>
+      <attr class="hide sh2">
         <strong id="sh4">{{when}}</strong>
       </attr>
 

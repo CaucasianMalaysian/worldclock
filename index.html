@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://resonova.github.io/cdn/css/fa.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://h8rt3rmin8r.com/js/show-hide.js"></script>
+  <script type="text/javascript" src="https://momentjs.com/downloads/moment-timezone.js"></script>
 
 </head>
 
@@ -41,12 +42,30 @@
     </span>
     <br>
 </div>-->
-  <div id="content"></div>
 
+
+
+  <div class="container">
+    <div class="clock">
+      <!-- <div id="Date"></div> -->
+
+      <ul>
+
+        <li id="hours"> </li>
+        <li id="point">:</li>
+        <li id="min"> </li>
+        <li id="point">:</li>
+        <li id="sec"> </li>
+      </ul>
+
+
+    </div>
+  </div>
+  <div id="content"></div>
   <script type="text/template" id="timezone">
     <div class="timezone">
       <div class="time hide" id="time-{{name}} sh1">{{time}}</div>
-      <h1 class="timezone__location hide" id="sh2" >{{name}}</h1>
+      <h1 class="timezone__location hide" id="sh2">{{name}}</h1>
       <attr class="hide" id="sh3">
         <strong id="sh4">{{when}}</strong>
       </attr>
